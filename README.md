@@ -31,6 +31,29 @@ CIFAR-100 veri seti, CIFAR-10 ile benzerlik göstermektedir; ancak 100 sınıf i
   - Sınıf 3
   - ...
 
+## CIFAR-100 Süper Sınıflar ve Sınıflar
+
+| Süper Sınıf                           | Sınıflar                                                      |
+|---------------------------------------|--------------------------------------------------------------|
+| **Aquatic Mammals**                  | beaver, dolphin, otter, seal, whale                         |
+| **Fish**                              | aquarium fish, flatfish, ray, shark, trout                  |
+| **Flowers**                           | orchids, poppies, roses, sunflowers, tulips                 |
+| **Food Containers**                   | bottles, bowls, cans, cups, plates                           |
+| **Fruit and Vegetables**              | apples, mushrooms, oranges, pears, sweet peppers             |
+| **Household Electrical Devices**      | clock, computer keyboard, lamp, telephone, television        |
+| **Household Furniture**                | bed, chair, couch, table, wardrobe                           |
+| **Insects**                           | bee, beetle, butterfly, caterpillar, cockroach              |
+| **Large Carnivores**                 | bear, leopard, lion, tiger, wolf                             |
+| **Large Man-Made Outdoor Things**    | bridge, castle, house, road, skyscraper                      |
+| **Large Natural Outdoor Scenes**      | cloud, forest, mountain, plain, sea                          |
+| **Large Omnivores and Herbivores**   | camel, cattle, chimpanzee, elephant, kangaroo               |
+| **Medium-Sized Mammals**             | fox, porcupine, possum, raccoon, skunk                      |
+| **Non-Insect Invertebrates**         | crab, lobster, snail, spider, worm                           |
+| **People**                            | baby, boy, girl, man, woman                                 |
+| **Reptiles**                         | crocodile, dinosaur, lizard, snake, turtle                  |
+| **Small Mammals**                    | hamster, mouse, rabbit, shrew, squirrel                     |
+| **Trees
+
 
 ## Kullanım Alanları
 Bu proje, geniş bir uygulama yelpazesine sahiptir:
