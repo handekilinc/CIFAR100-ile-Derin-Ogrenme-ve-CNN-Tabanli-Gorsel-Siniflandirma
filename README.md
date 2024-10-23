@@ -11,8 +11,8 @@ Projenin amacı, CIFAR-100 veri setini kullanarak derin öğrenme teknikleri ile
 ## CIFAR-100 Veri Seti
 CIFAR-100 (Canadian Institute For Advanced Research) veri seti, 60,000 renkli görüntüden oluşan ve 100 farklı sınıfa ait 32x32 piksel boyutunda küçük resimlerden oluşan bir veri setidir. Veri seti, 20 aileye ayrılmıştır ve her aile 5 sınıf içerir. Örneğin, "hayvanlar" ailesi "kedi", "köpek", "kuş", "sığır" ve "at" gibi sınıfları içerir. CIFAR-100, görsel sınıflandırma ve derin öğrenme alanında yaygın olarak kullanılan bir veri setidir ve daha karmaşık yapısıyla model geliştirmeleri için zorlu bir zemin sunar. 
 
-
-![CIFAR-10 and CIFAR-100 Images](https://www.researchgate.net/publication/335669341/figure/fig5/AS:962425931190277@1606471631499/Images-in-CIFAR-10-and-CIFAR-100-database.jpg)
+![Some samples on the Caltech101, Caltech 256, CIFAR 10 and CIFAR 100](assets/Some-samples-on-the-Caltech-101-Caltech-256-Cifar-10-and-Cifar-100.png)  
+*Caltech101 veri seti ve Caltech 256, CIFAR 10 ve CIFAR 100 üzerinde bazı örnekler*
 
 ## CIFAR-100 Veri Seti Hakkında
 
