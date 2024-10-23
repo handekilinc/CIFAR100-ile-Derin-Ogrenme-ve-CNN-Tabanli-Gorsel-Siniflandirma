@@ -1,3 +1,5 @@
+![dataset cover](assets/dataset-cover.png)
+
 # CIFAR-100 ile Derin Öğrenme ve CNN Tabanlı Görsel Sınıflandırma
 
 ## Hakkında
