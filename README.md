@@ -1,5 +1,7 @@
 # CIFAR-100 ile Derin Öğrenme ve CNN Tabanlı Görsel Sınıflandırma
 
+[CIFAR-100 100x100 Images Extension](https://www.kaggle.com/datasets/dunky11/cifar100-100x100-images-extension/code)
+
 ## Hakkında
 Bu proje, CIFAR-100 veri seti kullanılarak derin öğrenme teknikleri ile görsel sınıflandırma yeteneklerinin geliştirilmesine yönelik bir çalışmadır. Model, veri artırma yöntemleri ve hiperparametre optimizasyonu ile desteklenerek, görsel sınıflandırma problemlerine etkili çözümler sunmayı hedefler. CIFAR-100, CIFAR-10’a kıyasla daha karmaşık ve zengin sınıf yapısı sunarak, derin öğrenme uygulamalarının potansiyelini artırmaktadır.
 
@@ -52,7 +54,10 @@ CIFAR-100 veri seti, CIFAR-10 ile benzerlik göstermektedir; ancak 100 sınıf i
 | **People**                            | baby, boy, girl, man, woman                                 |
 | **Reptiles**                         | crocodile, dinosaur, lizard, snake, turtle                  |
 | **Small Mammals**                    | hamster, mouse, rabbit, shrew, squirrel                     |
-| **Trees
+| **Trees**                            | maple, oak, palm, pine, willow                               |
+| **Vehicles 1**                       | bicycle, bus, motorcycle, pickup truck, train                |
+| **Vehicles 2**                       | lawn-mower, rocket, streetcar, tank, tractor                 |
+
 
 
 ## Kullanım Alanları
