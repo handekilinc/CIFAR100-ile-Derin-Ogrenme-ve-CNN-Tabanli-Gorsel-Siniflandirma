@@ -18,9 +18,8 @@ CIFAR-100 (Canadian Institute For Advanced Research) veri seti, 60,000 renkli g�
 
 CIFAR-100 veri seti, CIFAR-10 ile benzerlik göstermektedir; ancak 100 sınıf içermektedir ve her sınıfta 600 görsel bulunmaktadır. Her sınıf için 500 eğitim görseli ve 100 test görseli mevcuttur. CIFAR-100'deki 100 sınıf, 20 süper sınıf altında gruplandırılmıştır. Veri seti, her görüntü için “fine” etiket (sınıf) ve “coarse” etiket (süpersınıf) olmak üzere iki etiketle birlikte gelir.
 
-## A resmi CIFAR-10'dan, B resmi ise CIFAR-100'den görseller içerir.
-
 ![cifar 10 and cifar 100](assets/Images-in-CIFAR-10-and-CIFAR-100-database.png)
+*A resmi CIFAR-10'dan, B resmi ise CIFAR-100'den görseller içerir.*
 
 ### CIFAR-100 Sınıfları
 - **Süper Sınıf 1**
