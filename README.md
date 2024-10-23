@@ -12,12 +12,13 @@ Projenin amacı, CIFAR-100 veri setini kullanarak derin öğrenme teknikleri ile
 CIFAR-100 (Canadian Institute For Advanced Research) veri seti, 60,000 renkli görüntüden oluşan ve 100 farklı sınıfa ait 32x32 piksel boyutunda küçük resimlerden oluşan bir veri setidir. Veri seti, 20 aileye ayrılmıştır ve her aile 5 sınıf içerir. Örneğin, "hayvanlar" ailesi "kedi", "köpek", "kuş", "sığır" ve "at" gibi sınıfları içerir. CIFAR-100, görsel sınıflandırma ve derin öğrenme alanında yaygın olarak kullanılan bir veri setidir ve daha karmaşık yapısıyla model geliştirmeleri için zorlu bir zemin sunar. 
 
 
-##a) CIFAR-10 B)CIFAR-100
 ![CIFAR-10 and CIFAR-100 Images](https://www.researchgate.net/publication/335669341/figure/fig5/AS:962425931190277@1606471631499/Images-in-CIFAR-10-and-CIFAR-100-database.jpg)
 
 ## CIFAR-100 Veri Seti Hakkında
 
 CIFAR-100 veri seti, CIFAR-10 ile benzerlik göstermektedir; ancak 100 sınıf içermektedir ve her sınıfta 600 görsel bulunmaktadır. Her sınıf için 500 eğitim görseli ve 100 test görseli mevcuttur. CIFAR-100'deki 100 sınıf, 20 süper sınıf altında gruplandırılmıştır. Veri seti, her görüntü için “fine” etiket (sınıf) ve “coarse” etiket (süpersınıf) olmak üzere iki etiketle birlikte gelir.
+
+## A resmi CIFAR-10'dan, B resmi ise CIFAR-100'den görseller içerir.
 
 ![cifar 10 and cifar 100](assets/Images-in-CIFAR-10-and-CIFAR-100-database.png)
 
@@ -41,30 +42,31 @@ CIFAR-100 veri seti, CIFAR-10 ile benzerlik göstermektedir; ancak 100 sınıf i
 
 ## CIFAR-100 Süper Sınıflar ve Sınıflar
 
-| Süper Sınıf                           | Sınıflar                                                      |
-|---------------------------------------|--------------------------------------------------------------|
-| **Aquatic Mammals**                  | beaver, dolphin, otter, seal, whale                         |
-| **Fish**                              | aquarium fish, flatfish, ray, shark, trout                  |
-| **Flowers**                           | orchids, poppies, roses, sunflowers, tulips                 |
-| **Food Containers**                   | bottles, bowls, cans, cups, plates                           |
-| **Fruit and Vegetables**              | apples, mushrooms, oranges, pears, sweet peppers             |
-| **Household Electrical Devices**      | clock, computer keyboard, lamp, telephone, television        |
-| **Household Furniture**                | bed, chair, couch, table, wardrobe                           |
-| **Insects**                           | bee, beetle, butterfly, caterpillar, cockroach              |
-| **Large Carnivores**                 | bear, leopard, lion, tiger, wolf                             |
-| **Large Man-Made Outdoor Things**    | bridge, castle, house, road, skyscraper                      |
-| **Large Natural Outdoor Scenes**      | cloud, forest, mountain, plain, sea                          |
-| **Large Omnivores and Herbivores**   | camel, cattle, chimpanzee, elephant, kangaroo               |
-| **Medium-Sized Mammals**             | fox, porcupine, possum, raccoon, skunk                      |
-| **Non-Insect Invertebrates**         | crab, lobster, snail, spider, worm                           |
-| **People**                            | baby, boy, girl, man, woman                                 |
-| **Reptiles**                         | crocodile, dinosaur, lizard, snake, turtle                  |
-| **Small Mammals**                    | hamster, mouse, rabbit, shrew, squirrel                     |
-| **Trees**                            | maple, oak, palm, pine, willow                               |
-| **Vehicles 1**                       | bicycle, bus, motorcycle, pickup truck, train                |
-| **Vehicles 2**                       | lawn-mower, rocket, streetcar, tank, tractor                 |
+### Süper Sınıflar ve Sınıflar
+| Süper Sınıf                        | Sınıflar                                                     |
+|-------------------------------------|-------------------------------------------------------------|
+| Akciğer memelileri                  | kunduz, yunus, su samuru, fok, balina                      |
+| Balık                               | akvaryum balığı, yassı balık, ışın, köpek balığı, alabalık |
+| Çiçekler                            | orkide, gelincik, gül, ayçiçeği, lale                      |
+| Gıda kapları                        | şişeler, kaseler, kutular, fincanlar, tabaklar              |
+| Meyve ve sebzeler                  | elmalar, mantarlar, portakallar, armutlar, dolmalık biber  |
+| Ev elektrikli cihazları            | saat, bilgisayar klavyesi, lamba, telefon, televizyon      |
+| Ev mobilyası                        | yatak, sandalye, kanepe, masa, dolap                        |
+| Böcekler                            | arı, böcek, kelebek, tırtıl, hamamböceği                    |
+| Büyük etoburlar                     | ayı, leopar, aslan, kaplan, kurt                             |
+| Büyük insan yapımı dış nesneler     | köprü, kale, ev, yol, gökdelen                              |
+| Büyük doğal dış manzaralar          | bulut, orman, dağ, ova, deniz                               |
+| Büyük omnivor ve otoburlar          | deve, sığır, şempanze, fil, kanguru                          |
+| Orta büyüklükte memeliler           | tilki, kirpi, opossum, rakun, sincab                       |
+| Böcek olmayan omurgasızlar          | yengeç, ıstakoz, salyangoz, örümcek, solucan               |
+| İnsanlar                            | bebek, erkek çocuk, kız çocuk, adam, kadın                  |
+| Sürüngenler                         | timsah, dinozor, kertenkele, yılan, kaplumbağa             |
+| Küçük memeliler                     | hamster, fare, tavşan, köstebek, sincap                     |
+| Ağaçlar                             | akçaağaç, meşe, palmiye, çam, söğüt                         |
+| Araçlar 1                           | bisiklet, otobüs, motosiklet, pikap, tren                   |
+| Araçlar 2                           | çim biçme makinesi, roket, tramvay, tank, traktör           |
 
-
+![Sınıflar](assets/classes.png)  
 
 ## Kullanım Alanları
 Bu proje, geniş bir uygulama yelpazesine sahiptir:
