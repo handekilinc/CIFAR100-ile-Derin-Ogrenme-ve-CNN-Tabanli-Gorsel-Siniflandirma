@@ -1,6 +1,6 @@
 # CIFAR-100 ile Derin Öğrenme ve CNN Tabanlı Görsel Sınıflandırma
 
-![CIFAR-100 100x100 Images Extension](https://storage.googleapis.com/kaggle-datasets-images/2023/2099258/2a01d64c15c773e0127583ccbcdbcd93/dataset_100x100.png)
+![CIFAR-100 100x100 Images Extension](https://storage.googleapis.com/kaggle-datasets-images/2099258/2a01d64c15c773e0127583ccbcdbcd93/dataset_100x100.png)
 
 ## Hakkında
 Bu proje, CIFAR-100 veri seti kullanılarak derin öğrenme teknikleri ile görsel sınıflandırma yeteneklerinin geliştirilmesine yönelik bir çalışmadır. Model, veri artırma yöntemleri ve hiperparametre optimizasyonu ile desteklenerek, görsel sınıflandırma problemlerine etkili çözümler sunmayı hedefler. CIFAR-100, CIFAR-10’a kıyasla daha karmaşık ve zengin sınıf yapısı sunarak, derin öğrenme uygulamalarının potansiyelini artırmaktadır.
