@@ -93,27 +93,73 @@ Bu projede kullanılan başlıca kütüphaneler şunlardır:
 - **Parametre Paylaşımı**: CNN'ler, ağırlıkları paylaştıkları için daha az parametre ile çalışarak daha hızlı ve etkili öğrenme sağlar.
 - **Havuzlama (Pooling)**: CNN'ler, havuzlama katmanları kullanarak özellikleri sıkıştırabilir ve modelin genel doğruluğunu artırabilir.
 
+# Model Performansını Artırma ve Değerlendirme
+
+Bu projede, model performansını artırmak için çeşitli teknikler uygulandı. Uygulanan yöntemler ve performans ölçüm metrikleri aşağıda sıralanmıştır:
+
+## Yapılanlar
+
+1. **Veri Artırma**:
+   - **Parlaklık Ayarları**: `brightness_range` kullanarak görüntülerin parlaklık seviyeleri %95 ile %105 arasında değiştirildi. Bu, modelin farklı aydınlatma koşullarına karşı dayanıklılığını artırdı.
+   - **Renk Kanalı Değişimi**: `channel_shift_range` ile renk kanallarında 30.0 kadar kayma uygulandı. Bu, modelin renk varyasyonlarına karşı daha iyi genelleme yapabilmesini sağladı.
+   - **Yatay Çevirme**: `horizontal_flip` ile görüntüler yatay olarak çevrildi. Bu, nesnelerin farklı yönlerde görünmesini sağlayarak modelin çeşitliliğini artırdı.
+
+2. **Kontrast Ayarları**:
+   - **Kontrast Ayarları**: Eğitim verileri üzerinde kontrast ayarları yapıldı. Bu, görüntülerin daha belirgin hale gelmesini ve modelin önemli özellikleri daha iyi öğrenmesini sağladı.
+
+3. **K-Fold Çapraz Doğrulama**:
+   - Modelin genel performansını değerlendirmek için k-fold çapraz doğrulama yöntemi kullanıldı. Bu yöntem, modelin daha sağlam ve genelleyici olmasını sağladı.
+
+4. **Performans Metrikleri**:
+   - Model performansını değerlendirmek için aşağıdaki metrikler kullanıldı:
+     - **Doğruluk (Accuracy)**: Modelin doğru tahmin sayısının toplam tahmin sayısına oranı.
+     - **Kesinlik (Precision)**: Pozitif tahminlerin ne kadarının doğru olduğunu gösterir.
+     - **Duyarlılık (Recall)**: Gerçek pozitiflerin ne kadarının doğru tahmin edildiğini gösterir.
+     - **F1 Skoru**: Kesinlik ve duyarlılığın harmonik ortalaması, modelin genel dengesini gösterir.
+
+5. **Modelin Eğitilmesi**:
+   - Model çeşitli hiperparametrelerle eğitildi ve farklı mimariler deneyerek en iyi sonuçlar elde edilmeye çalışıldı.
+
+6. **Sonuçların Görselleştirilmesi**:
+   - Eğitim ve doğrulama süreçleri görselleştirildi. Karışıklık matrisleri Türkçe etiketlerle oluşturularak hangi sınıflar arasında karışıklık olduğu gözlemlendi.
+
+## Özet
+
+Yukarıdaki yöntemler ve stratejiler, modelin performansını artırmak için sistematik olarak uygulandı. Her bir adım, modelin genelleme yeteneğini artırmaya ve sonuçların güvenilirliğini sağlamaya yönelikti. Bu tür iyileştirmeler, uygulamanın başarısını artıracak ve daha etkili bir model elde etmeye yardımcı olacaktır.
+
 ## Gelecekteki Araştırmalar
+
 Gelecekteki araştırmalara dair öneriler şunlardır:
-1. **Gelişmiş Veri Artırma Teknikleri**: Görüntü verileri üzerinde daha karmaşık artırma tekniklerinin uygulanması, örneğin:
-   - **Renk Değişiklikleri**: Görüntülerin renk doygunluğunun veya tonlarının değiştirilmesi.
-   - **Kontrast Ayarları**: Görüntülerin kontrast değerlerinin ayarlanması ile daha fazla görsel çeşitlilik sağlanması.
-   - **Gaussian Gürültüsü**: Görüntülere rastgele gürültü ekleyerek modelin genel dayanıklılığının artırılması.
-   - **Dönme ve Çevirme**: Görüntülerin belirli açılarda döndürülmesi veya yatay/dikey olarak çevrilmesi, modelin farklı görünümleri tanıma yeteneğini artırabilir.
 
-2. **Transfer Öğrenimi**: Önceden eğitilmiş modellerin kullanımı ile daha az veri ile yüksek performans elde edilmesi, böylece sınırlı veri setleri ile çalışırken verimliliğin artırılması.
+1. **Gelişmiş Veri Artırma Teknikleri**:
+   - **Gaussian Gürültüsü**: Görüntülere rastgele gürültü ekleyerek modelin genel dayanıklılığının artırılması. Bu, modelin çeşitli koşullarda daha sağlam hale gelmesine yardımcı olabilir.
+   - **Dönme ve Çevirme**: Görüntülerin belirli açılarda döndürülmesi veya yatay/dikey olarak çevrilmesi, modelin farklı görünümleri tanıma yeteneğini artırabilir. Bu yöntem, modelin daha geniş bir veri çeşitliliği ile eğitilmesini sağlar.
 
-3. **Gerçek Zamanlı Uygulamalar**: Modelin gerçek zamanlı veri akışları üzerinde çalıştırılması, akıllı uygulamalar ve otomatik tanıma sistemleri geliştirme potansiyelini artırır.
+2. **Hiperparametre Optimizasyonu**: 
+   - Hiperparametre optimizasyonu, modelin performansını artırmak için önemli bir adımdır. Örneğin:
+     - **Grid Search**: Belirli bir parametre aralığında en iyi sonuçları veren kombinasyonları bulur.
+     - **Random Search**: Belirli bir parametre uzayında rastgele seçimler yaparak en iyi parametreleri belirler.
+   - Bu yöntemler, öğrenme oranı, batch boyutu ve dropout oranı gibi kritik parametrelerin en uygun değerlerini belirleyerek modelin genel başarısını artırabilir.
 
-4. **Modeli İnce Ayar Yapma**: Daha derin ve karmaşık modellerin tasarlanması, farklı ağ mimarileri ile deneyler yaparak sonuçların iyileştirilmesi.
+3. **Transfer Öğrenimi**: 
+   - Önceden eğitilmiş modellerin kullanımı, daha az veri ile yüksek performans elde edilmesini sağlar. Önerilen bazı önceden eğitilmiş modeller şunlardır:
+     - **VGG16**: Görüntü sınıflandırma için yaygın olarak kullanılan derin bir ağ. Detaylı özellik çıkarımı yapabilir.
+     - **ResNet50**: Kalan bağlantı mimarisi ile derinlik ve performans arasında denge sağlar, özellikle derin öğrenme alanında popülerdir.
+     - **InceptionV3**: Farklı filtre boyutları ile çoklu özelliği yakalayarak daha iyi genelleme sağlar.
+     - **MobileNet**: Hafif bir model olarak mobil uygulamalar için optimize edilmiştir, düşük hesaplama gücü gereksinimi ile hızlı sonuçlar sağlar.
+   - Bu modeller, sınırlı veri setleri ile çalışırken verimliliği artırmak için kullanılabilir.
 
-## Sonuçlar ve Değerlendirme
-Proje sonucunda, CIFAR-100 veri seti üzerinde geliştirilen derin öğrenme modelinin başarısı önemli ölçüde artmıştır. Uygulanan veri artırma ile modelin doğruluğu %80’in üzerine çıkmıştır. Eğitim sürecinin ardından elde edilen doğruluk ve kayıp grafiklerinin görselleştirilmesi, modelin öğrenme sürecini daha iyi anlamamıza olanak tanımıştır. 
+4. **Gerçek Zamanlı Uygulamalar**: 
+   - Modelin gerçek zamanlı veri akışları üzerinde çalıştırılması, akıllı uygulamalar ve otomatik tanıma sistemleri geliştirme potansiyelini artırır. Örneğin:
+     - **Görüntü İşleme Uygulamaları**: Güvenlik sistemlerinde yüz tanıma, otonom araçlarda nesne algılama gibi alanlarda kullanılabilir.
+     - **Akıllı Tarım**: Tarımda hastalık tespiti için drone görüntüleri üzerinde analiz yaparak verimliliği artırabilir.
 
-### Sonuçların Değerlendirilmesi
-Elde edilen sonuçlar, modelin genel doğruluğunun artışını ve eğitim sürecinin etkinliğini göstermektedir. Doğruluk grafiği, modelin her eğitim epoch'unda performansını artırdığını ortaya koymakta, kayıp grafiği ise modelin öğrenme sürecindeki iyileşmeleri göstermektedir. Ek olarak, modelin overfitting (aşırı öğrenme) sorununu önlemek için uygulanan veri artırma tekniklerinin etkili olduğu gözlemlenmiştir. 
+5. **Modeli İnce Ayar Yapma**: 
+   - Daha derin ve karmaşık modellerin tasarlanması, farklı ağ mimarileri ile deneyler yaparak sonuçların iyileştirilmesi. Bu, modelin genelleme yeteneğini artırabilir ve daha karmaşık verilere karşı daha etkili hale gelmesini sağlayabilir. Uygulama aşamasında, aşağıdaki stratejiler değerlendirilebilir:
+     - **Katman Sayısını Arttırma**: Modelin daha fazla katman ile derinleştirilmesi, daha karmaşık özelliklerin öğrenilmesine olanak tanır.
+     - **Farklı Aktivasyon Fonksiyonları Kullanma**: ReLU, Leaky ReLU, tanh gibi farklı aktivasyon fonksiyonları ile modelin öğrenme süreci iyileştirilebilir.
 
-Sonuç olarak, CIFAR-100 veri setindeki daha karmaşık yapılar ve sınıflar sayesinde, geliştirilen modelin görsel sınıflandırma yeteneklerinin daha da ileriye taşınması mümkün olmuştur. Gelecekte yapılacak çalışmalar, bu alandaki yenilikçi uygulamaları destekleyecek ve derin öğrenme alanındaki gelişmelere katkı sağlayacaktır.
+Bu öneriler, modelin performansını artırmak ve genel araştırma sürecini geliştirmek amacıyla yapılacak olan çalışmaların yönünü belirlemeye yardımcı olacaktır. Uygulanan yöntemlerin etkinliği, gelecekteki projelerde daha fazla başarı elde edilmesine katkı sağlayacaktır.
 
 ## Kullanılan Adımlar
 1. **Veri Setini Yükleme**: CIFAR-100 veri setinin indirilmesi ve yüklenmesi.
@@ -123,3 +169,13 @@ Sonuç olarak, CIFAR-100 veri setindeki daha karmaşık yapılar ve sınıflar s
 5. **Modelin Eğitilmesi**: Eğitim sürecinin başlatılması ve modelin eğitilmesi.
 6. **Modelin Değerlendirilmesi**: Doğruluk ve kayıp grafiklerinin oluşturulması.
 7. **Sonuçların Görselleştirilmesi**: Modelin öğrenme sürecinin grafiklerle sunulması.
+   
+## Sonuçlar ve Değerlendirme
+Proje sonucunda, CIFAR-100 veri seti üzerinde geliştirilen derin öğrenme modelinin başarısı önemli ölçüde artmıştır. Uygulanan veri artırma ile modelin doğruluğu %80’in üzerine çıkmıştır. Eğitim sürecinin ardından elde edilen doğruluk ve kayıp grafiklerinin görselleştirilmesi, modelin öğrenme sürecini daha iyi anlamamıza olanak tanımıştır. 
+
+### Sonuçların Değerlendirilmesi
+Elde edilen sonuçlar, modelin genel doğruluğunun artışını ve eğitim sürecinin etkinliğini göstermektedir. Doğruluk grafiği, modelin her eğitim epoch'unda performansını artırdığını ortaya koymakta, kayıp grafiği ise modelin öğrenme sürecindeki iyileşmeleri göstermektedir. Ek olarak, modelin overfitting (aşırı öğrenme) sorununu önlemek için uygulanan veri artırma tekniklerinin etkili olduğu gözlemlenmiştir. 
+
+Sonuç olarak, CIFAR-100 veri setindeki daha karmaşık yapılar ve sınıflar sayesinde, geliştirilen modelin görsel sınıflandırma yeteneklerinin daha da ileriye taşınması mümkün olmuştur. Gelecekte yapılacak çalışmalar, bu alandaki yenilikçi uygulamaları destekleyecek ve derin öğrenme alanındaki gelişmelere katkı sağlayacaktır.
+
+
