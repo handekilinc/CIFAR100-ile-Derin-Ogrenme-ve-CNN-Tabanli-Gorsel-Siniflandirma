@@ -107,20 +107,17 @@ Bu projede, model performansını artırmak için çeşitli teknikler uygulandı
 2. **Kontrast Ayarları**:
    - **Kontrast Ayarları**: Eğitim verileri üzerinde kontrast ayarları yapıldı. Bu, görüntülerin daha belirgin hale gelmesini ve modelin önemli özellikleri daha iyi öğrenmesini sağladı.
 
-3. **K-Fold Çapraz Doğrulama**:
-   - Modelin genel performansını değerlendirmek için k-fold çapraz doğrulama yöntemi kullanıldı. Bu yöntem, modelin daha sağlam ve genelleyici olmasını sağladı.
-
-4. **Performans Metrikleri**:
+3. **Performans Metrikleri**:
    - Model performansını değerlendirmek için aşağıdaki metrikler kullanıldı:
      - **Doğruluk (Accuracy)**: Modelin doğru tahmin sayısının toplam tahmin sayısına oranı.
      - **Kesinlik (Precision)**: Pozitif tahminlerin ne kadarının doğru olduğunu gösterir.
      - **Duyarlılık (Recall)**: Gerçek pozitiflerin ne kadarının doğru tahmin edildiğini gösterir.
      - **F1 Skoru**: Kesinlik ve duyarlılığın harmonik ortalaması, modelin genel dengesini gösterir.
 
-5. **Modelin Eğitilmesi**:
+4. **Modelin Eğitilmesi**:
    - Model çeşitli hiperparametrelerle eğitildi ve farklı mimariler deneyerek en iyi sonuçlar elde edilmeye çalışıldı.
 
-6. **Sonuçların Görselleştirilmesi**:
+5. **Sonuçların Görselleştirilmesi**:
    - Eğitim ve doğrulama süreçleri görselleştirildi. Karışıklık matrisleri Türkçe etiketlerle oluşturularak hangi sınıflar arasında karışıklık olduğu gözlemlendi.
 
 ## Özet
